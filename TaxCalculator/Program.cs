@@ -92,6 +92,15 @@ namespace TaxCalculator
             const double levelFifthIncome = 40000.00;   // Constant that holds the fifth income threshold
             const double levelSixthIncome = 50000.00;   // Constant that holds the sixth income threshold
 
+            const double incomeMinimum = 1.00;          // Constant that holds the income minimum
+            const double incomeMaximum = 1000000.00;    // Constant that holds the income maximum
+
+            const double taxesPaidToDateMinimum = 0.00;             // Constant that holds the taxes paid to date minimum
+            const double taxesPaidToDateMaximum = 300000.00;        // Constant that holds the taxes paid to date maximum
+
+            const double taxesDeductionsMinimum = 0.00;             // Constant that holds the tax deductions minimum
+            const double taxesDeductionsMaximum = 250000.00;        // Constant that holds the tax deductions maximum
+
             // Tax rates
             const double rateFirstTax = 0.15;           // Constant that holds the first tax rate
             const double rateSecondTax = 0.175;         // Constant that holds the second tax rate
@@ -118,7 +127,36 @@ namespace TaxCalculator
             string message = string.Empty;              // Variable to hold the message fragment to be displayed, determined in process
 
             ///////////////
+            // Input
             ///////////////
+
+
+            // Prompt and store the person's total yearly income in the totalYearlyIncome variable 
+            // after the user input is converted to a double and 
+            // it is validated agianst the income minimum and maximum range
+            // and we also know it is a number.
+
+            Console.Write("Please enter the person's total yearly income \n\t(between {0:c} and {1:c}): ", incomeMinimum, incomeMaximum ); // prompt the total yearly income
+
+            // Keep asking the user until they input the correct height
+            while ((!(Double.TryParse(Console.ReadLine(), out totalYearlyIncome)))    // check that the input is a double
+                    || ((totalYearlyIncome < incomeMinimum)                           // compare the input against the minimum constant
+                    || (totalYearlyIncome > incomeMaximum)))                          // compare the input against the maximum constant
+            {
+                // Prompt the user for the person's height in inches.
+                Console.Write("\n Error \nPlease enter the person's total yearly income \n\t(between {0:c} and {1:c}): ", incomeMinimum, incomeMaximum); // prompt the total yearly income
+
+            }
+
+
+
+            // Ask the user to press any key to end the program
+            // \n - use the newlijne escape character to move the output to the next line.
+            Console.Write("\nPress any key to end this application...");
+
+            // Use the Console ReadKey to pause the program until the user presses any key
+            // to end the application.
+            Console.ReadKey();
 
         }
     }
