@@ -117,7 +117,8 @@ namespace TaxCalculator
 
             string message = string.Empty;              // Variable to hold the message fragment to be displayed, determined in process
 
-
+            ///////////////
+            ///////////////
 
         }
     }
