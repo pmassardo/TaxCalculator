@@ -138,16 +138,33 @@ namespace TaxCalculator
 
             Console.Write("Please enter the person's total yearly income \n\t(between {0:c} and {1:c}): ", incomeMinimum, incomeMaximum ); // prompt the total yearly income
 
-            // Keep asking the user until they input the correct height
+            // Keep asking the user until they input the correct total yearly income
             while ((!(Double.TryParse(Console.ReadLine(), out totalYearlyIncome)))    // check that the input is a double
                     || ((totalYearlyIncome < incomeMinimum)                           // compare the input against the minimum constant
                     || (totalYearlyIncome > incomeMaximum)))                          // compare the input against the maximum constant
             {
-                // Prompt the user for the person's height in inches.
+                // Prompt the user for the person's total yearly income.
                 Console.Write("\n Error \nPlease enter the person's total yearly income \n\t(between {0:c} and {1:c}): ", incomeMinimum, incomeMaximum); // prompt the total yearly income
 
             }
 
+
+            // Prompt and store the person's total taxes paid to date in the taxesPaidToDate variable 
+            // after the user input is converted to a double and 
+            // it is validated agianst the taxes paid to date minimum and maximum range
+            // and we also know it is a number.
+
+            Console.Write("Please enter the person's total taxes paid to date \n\t(between {0:c} and {1:c}): ", taxesPaidToDateMinimum, taxesPaidToDateMaximum); // prompt for the total taxes paid to date
+
+            // Keep asking the user until they input the correct taxes paid to date
+            while ((!(Double.TryParse(Console.ReadLine(), out taxesPaidToDate)))        // check that the input is a double
+                    || ((taxesPaidToDate < taxesPaidToDateMinimum)                      // compare the input against the minimum constant
+                    || (taxesPaidToDate > taxesPaidToDateMaximum)))                     // compare the input against the maximum constant
+            {
+                // Prompt the user for the person's taxes paid to date.
+                Console.Write("\n Error \nPlease enter the person's total taxes paid to date \n\t(between {0:c} and {1:c}): ", taxesPaidToDateMinimum, taxesPaidToDateMaximum); // prompt for the total taxes paid to date
+
+            }
 
 
             // Ask the user to press any key to end the program
