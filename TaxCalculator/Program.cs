@@ -80,7 +80,42 @@ namespace TaxCalculator
         static void Main(string[] args)
         {
 
-            
+            ///////////////
+            // Constants
+            ///////////////
+
+            // Income threshold levels
+            const double levelFirstIncome = 10000.00;   // Constant that holds the first income threshold
+            const double levelSecondIncome = 15000.00;  // Constant that holds the second income threshold
+            const double levelThirdIncome = 25000.00;   // Constant that holds the third income threshold
+            const double levelFourthIncome = 30000.00;  // Constant that holds the fourth income threshold
+            const double levelFifthIncome = 40000.00;   // Constant that holds the fifth income threshold
+            const double levelSixthIncome = 50000.00;   // Constant that holds the sixth income threshold
+
+            // Tax rates
+            const double rateFirstTax = 0.15;           // Constant that holds the first tax rate
+            const double rateSecondTax = 0.175;         // Constant that holds the second tax rate
+            const double rateThirdTax = 0.2;            // Constant that holds the third tax rate
+            const double rateFourthTax = 0.25;          // Constant that holds the fourth tax rate
+            const double rateFifthTax = 0.3;            // Constant that holds the fifth tax rate
+            const double rateSixthTax = 0.35;           // Constant that holds the sixth tax rate
+
+            const string messageOwe = "owe";            // Constant that holds the owe message
+            const string messageAreOwed = "are owed";   // Constant that holds the are owed message
+
+            ///////////////
+            // Variables
+            ///////////////
+
+            double totalYearlyIncome = 0.00;            // Variable to hold the total yearly income, input by user
+            double totalTaxDeductions = 0.00;           // Variable to hold the total tax dedcutions, input by user
+            double taxesPaidToDate = 0.00;              // Variable to hold the total taxes paid to date, input by user
+            double totalTaxableIncome = 0.00;           // Variable to hold the total taxable income, calculated in process
+            double totalTaxPayable = 0.00;              // Variable to hold the total tax payable, calculated in process
+            double applicableTaxRate = 0.00;            // Variable to hold the applicable tax rate, determined in process
+            double totalTaxCurrentlyDue = 0.00;         // Variable to hold the total taxes due, determined in process
+
+            string message = string.Empty;              // Variable to hold the message fragment to be displayed, determined in process
 
 
 
