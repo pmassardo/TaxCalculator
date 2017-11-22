@@ -4,3 +4,6 @@ C:\Users\Paolo\Documents\Visual Studio 2015\Projects\TaxCalculator\TaxCalculator
 C:\Users\Paolo\Documents\Visual Studio 2015\Projects\TaxCalculator\TaxCalculator\obj\Debug\TaxCalculator.csprojResolveAssemblyReference.cache
 C:\Users\Paolo\Documents\Visual Studio 2015\Projects\TaxCalculator\TaxCalculator\obj\Debug\TaxCalculator.exe
 C:\Users\Paolo\Documents\Visual Studio 2015\Projects\TaxCalculator\TaxCalculator\obj\Debug\TaxCalculator.pdb
+C:\Users\pmassardo\Documents\Visual Studio 2015\Projects\TaxCalculator\TaxCalculator\bin\Debug\TaxCalculator.exe.config
+C:\Users\pmassardo\Documents\Visual Studio 2015\Projects\TaxCalculator\TaxCalculator\obj\Debug\TaxCalculator.exe
+C:\Users\pmassardo\Documents\Visual Studio 2015\Projects\TaxCalculator\TaxCalculator\obj\Debug\TaxCalculator.pdb

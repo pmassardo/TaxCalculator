@@ -136,8 +136,8 @@ namespace TaxCalculator
             // it is validated agianst the income minimum and maximum range
             // and we also know it is a number.
             Console.Write("Please enter the person's total yearly income \n\t(between {0:c} and {1:c}): ", incomeMinimum, incomeMaximum ); // prompt the total yearly income
-
             // Keep asking the user until they input the correct total yearly income
+            // https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/while
             while ((!(Double.TryParse(Console.ReadLine(), out totalYearlyIncome)))    // check that the input is a double
                     || ((totalYearlyIncome < incomeMinimum)                           // compare the input against the minimum constant
                     || (totalYearlyIncome > incomeMaximum)))                          // compare the input against the maximum constant
@@ -154,6 +154,7 @@ namespace TaxCalculator
             Console.Write("Please enter the person's total taxes paid to date \n\t(between {0:c} and {1:c}): ", taxesPaidToDateMinimum, taxesPaidToDateMaximum); // prompt for the total taxes paid to date
 
             // Keep asking the user until they input the correct taxes paid to date
+            // https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/while
             while ((!(Double.TryParse(Console.ReadLine(), out taxesPaidToDate)))        // check that the input is a double
                     || ((taxesPaidToDate < taxesPaidToDateMinimum)                      // compare the input against the minimum constant
                     || (taxesPaidToDate > taxesPaidToDateMaximum)))                     // compare the input against the maximum constant
@@ -170,6 +171,7 @@ namespace TaxCalculator
             Console.Write("Please enter the person's total tax deductions for the year \n\t(between {0:c} and {1:c}): ", taxesDeductionsMinimum, taxesDeductionsMaximum); // prompt for the income tax deductions for the year
 
             // Keep asking the user until they input the correct taxes paid to date
+            // https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/while
             while ((!(Double.TryParse(Console.ReadLine(), out totalTaxDeductions)))        // check that the input is a double
                     || ((totalTaxDeductions < taxesDeductionsMinimum)                      // compare the input against the minimum constant
                     || (totalTaxDeductions > taxesDeductionsMaximum)))                     // compare the input against the maximum constant
@@ -188,7 +190,8 @@ namespace TaxCalculator
             totalTaxableIncome = totalYearlyIncome - totalTaxDeductions;
 
             // Determine the tax rate based on the taxable income
-            if(totalTaxableIncome < levelFirstIncome)           // If the totalTaxableIncome is less than levelFirstIncome
+            // https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/if-else
+            if (totalTaxableIncome < levelFirstIncome)           // If the totalTaxableIncome is less than levelFirstIncome
             {
                 applicableTaxRate = rateFirstTax;               // Assign the rateFirstTax value to the applicableTaxRate
             }
@@ -222,6 +225,7 @@ namespace TaxCalculator
             totalTaxCurrentlyDue = totalTaxPayable - taxesPaidToDate;
 
             // Determine the message fragment that will be displayed
+            // https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/if-else
             if (totalTaxCurrentlyDue > 0)       // If the amount currenty owed is greater than zero
             {
                 message = messageOwe;           // Assign the messageOwe value to the message
